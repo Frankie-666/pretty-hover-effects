@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Pretty Hover Effects</title>
+<link type="text/css" rel="stylesheet" href="hover-effects.css" />
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		var thumbs = $("ul li img");
+
+		for (var i = 0; i < thumbs.length; i++){
+			if (thumbs[i].title && thumbs[i].title.length > 0){
+				var imgtitle = thumbs[i].title;
+				$(thumbs[i]).wrap('<div class="wrapper wrapper'+i+'" />').
+				after('<div class=\'caption\'>' + imgtitle + '</div>').
+				removeAttr('title');
+			}
+		}
+
+	$('.wrapper0').hover(
+			function(){
+				$(this).find('img').animate({opacity: ".6"}, 300);
+				$(this).find('.caption').animate({top:"-85px"}, 300);
+			},
+			function(){
+				$(this).find('img').animate({opacity: "1.0"}, 300);
+				$(this).find('.caption').animate({top:"85px"}, 100);
+			}
+		);
+	$('.wrapper1').hover(
+			function(){
+				$(this).find('img').animate({opacity: ".3"}, 400);
+				$(this).find('.caption').animate({top:"-170px"}, 0);
+			},
+			function(){
+				$(this).find('img').animate({opacity: "1.0"}, 400);
+				$(this).find('.caption').animate({top:"85px"}, 0);
+			}
+		);
+		$('.wrapper2').hover(
+			function(){
+				$(this).find('img').animate({opacity: ".6"}, 300);
+				$(this).find('.caption').animate({top:"-247px"}, 300);
+			},
+			function(){
+				$(this).find('img').animate({opacity: "1.0"}, 300);
+				$(this).find('.caption').animate({top:"-370px"}, 100);
+			}
+		);
+	});
+</script>
+</head>
+<body>
+<div class="demo">
+		<h3><a style="text-decoration:none; color:#666;" href="http://michaelsoriano.com/pretty-hover-effects-with-css-and-jquery/">Pretty Hover Effects <span style="color:red;">Demo</span><br>
+			using CSS and jQuery</a></h3>
+			<p>This is a demonstration of adding hover effects to your HTML images. The technique uses a combination of Javascript, CSS and images in order to achieve the desired effect. </p>
+			<p>Hover your mouse over each image to see the effect.</p>
+</div>
+
+<div id="main">
+<ul>
+	<li><img src="images/77335_4871.jpg" title="Bottom Caption" /></li>
+	<li><img src="images/77335_4871.jpg" title="Middle Caption" /></li>
+	<li><img src="images/77335_4871.jpg" title="Top Caption" /></li>
+</ul>
+</div><!--main-->
+
+</body>
+</html>

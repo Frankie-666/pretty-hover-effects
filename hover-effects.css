@@ -1,0 +1,66 @@
+/*demo styles*/
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+.demo h3 {
+    font-family: 'Bree Serif', arial;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 1px dashed #ccc;
+    padding: 0 0 20px 0;
+    line-height: 38px;
+}
+.demo p {
+	max-width:650px;
+	margin:0 auto;
+	text-align:center;
+	font-family: 'Bree Serif', arial;
+	color:#666;
+	margin-bottom:15px;
+}
+#main {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+/*end demo styles*/
+
+ul {
+  padding:0;
+  margin:0;
+}
+ul li {
+  float:left;
+  list-style:none;
+  margin:25px;
+  width:218px;
+  height:218px;
+  overflow:hidden;
+  border:1px solid #d2d2d2;
+  background:#ececec;
+}
+
+div.wrapper{
+  width:218px;
+  height:218px;
+  overflow:hidden;
+  position:relative;
+}
+
+div.caption {
+  font-family:arial;
+  font-weight:bold;
+  font-size:14px;
+  position:relative;
+  text-align:center;
+  padding:55px 15px 15px 15px;
+  min-height:125px;
+  line-height:16px;
+}
+
+.wrapper0 div.caption {
+  background:url('images/caption-bg.png') repeat-x;
+}
+.wrapper2 div.caption {
+  top:-370px;
+  padding-top:44px;
+  background:url('images/caption-bg-top.png') repeat-x;
+}
